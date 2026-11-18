@@ -1,0 +1,53 @@
+{
+  "estimated": true,
+  "notes": [
+    "Draft based on the hand-drawn campus sketch. The placement of entrances and junctions is approximate.",
+    "All links are provisional and assumed to be two-way walking paths. Every distance_m value is an estimate.",
+    "Coordinates are for the on-screen diagram. Verify real entrances, permitted connections, and distances before using the map for navigation."
+  ],
+  "walking_speed_m_per_min": 75,
+  "map_width": 560,
+  "map_height": 670,
+  "nodes": {
+    "entry_gate": {"name": "Entry Gate", "x": 438, "y": 611, "landmark": true},
+    "old_building": {"name": "Old Building", "x": 280, "y": 306, "landmark": true},
+    "new_building": {"name": "New Building", "x": 97, "y": 367, "landmark": true},
+    "tuck_shop": {"name": "Tuck Shop", "x": 122, "y": 105, "landmark": true},
+    "basketball_court": {"name": "Basketball Court", "x": 344, "y": 106, "landmark": true},
+    "ground": {"name": "Ground", "x": 169, "y": 477, "landmark": true},
+    "bus_parking": {"name": "Bus Parking", "x": 169, "y": 586, "landmark": true},
+    "upper_left": {"name": "Upper-left junction", "x": 122, "y": 147, "landmark": false},
+    "upper_middle": {"name": "Court junction", "x": 344, "y": 147, "landmark": false},
+    "upper_right": {"name": "Upper-right junction", "x": 438, "y": 147, "landmark": false},
+    "cross_left": {"name": "West junction", "x": 122, "y": 367, "landmark": false},
+    "cross_middle": {"name": "Old Building junction", "x": 280, "y": 367, "landmark": false},
+    "cross_right": {"name": "Entry road junction", "x": 438, "y": 367, "landmark": false},
+    "ground_access": {"name": "Ground access junction", "x": 122, "y": 477, "landmark": false},
+    "parking_access": {"name": "Parking access junction", "x": 122, "y": 586, "landmark": false}
+  },
+  "edges": [
+    {"start": "entry_gate", "end": "cross_right", "distance_m": 120},
+    {"start": "cross_right", "end": "upper_right", "distance_m": 105},
+    {"start": "upper_right", "end": "upper_middle", "distance_m": 45},
+    {"start": "upper_middle", "end": "upper_left", "distance_m": 110},
+    {"start": "upper_left", "end": "cross_left", "distance_m": 110},
+    {"start": "cross_left", "end": "cross_middle", "distance_m": 80},
+    {"start": "cross_middle", "end": "cross_right", "distance_m": 75},
+    {"start": "cross_middle", "end": "old_building", "distance_m": 30},
+    {"start": "cross_left", "end": "new_building", "distance_m": 15},
+    {"start": "upper_left", "end": "tuck_shop", "distance_m": 20},
+    {"start": "upper_middle", "end": "basketball_court", "distance_m": 20},
+    {"start": "cross_left", "end": "ground_access", "distance_m": 55},
+    {"start": "ground_access", "end": "ground", "distance_m": 25},
+    {"start": "ground_access", "end": "parking_access", "distance_m": 55},
+    {"start": "parking_access", "end": "bus_parking", "distance_m": 25}
+  ],
+  "areas": [
+    {"name": "Tuck Shop", "kind": "shop", "x1": 53, "y1": 56, "x2": 190, "y2": 105},
+    {"name": "Basketball Court", "kind": "sport", "x1": 252, "y1": 48, "x2": 472, "y2": 106},
+    {"name": "Old Building", "kind": "building", "x1": 189, "y1": 201, "x2": 364, "y2": 306},
+    {"name": "New Building", "kind": "building", "x1": 16, "y1": 322, "x2": 97, "y2": 412},
+    {"name": "Ground", "kind": "ground", "x1": 169, "y1": 423, "x2": 363, "y2": 524},
+    {"name": "Bus Parking", "kind": "parking", "x1": 169, "y1": 553, "x2": 363, "y2": 619}
+  ]
+}
